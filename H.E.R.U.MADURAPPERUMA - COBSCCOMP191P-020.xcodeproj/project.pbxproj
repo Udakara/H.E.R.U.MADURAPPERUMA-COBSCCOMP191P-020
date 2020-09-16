@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17CBB0FAFD9E9A128E0547E8 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF94BA61E984EA7A03B4A0A0 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework */; };
+		4ADECA1F1C9B263C4544525D /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058F3CCCB7DF11BA9AC1B62F /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework */; };
+		B490545E2511AA9400B2A632 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */; };
+		B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545F2511AB4E00B2A632 /* HomeViewController.swift */; };
+		B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49054612511AB5C00B2A632 /* UpdateViewController.swift */; };
+		B49054642511AB6800B2A632 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49054632511AB6800B2A632 /* SettingsViewController.swift */; };
+		B4CBC49B2511F5A300121016 /* TemperatureUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */; };
+		B4CBC49F25120BE300121016 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC49E25120BE300121016 /* SurveyViewController.swift */; };
+		B4CBC4A125120CDB00121016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4CBC4A025120CDB00121016 /* GoogleService-Info.plist */; };
+		B4CEDBA02511E07A0094FDE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDB9F2511E07A0094FDE4 /* Extensions.swift */; };
+		B4CEDBA22511E0DB0094FDE4 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDBA12511E0DB0094FDE4 /* LocationHandler.swift */; };
+		B4CEDBA42511E6730094FDE4 /* SafeTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */; };
+		B4D9825825111C9700E358E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9825725111C9700E358E4 /* AppDelegate.swift */; };
+		B4D9825C25111C9700E358E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9825B25111C9700E358E4 /* ViewController.swift */; };
+		B4D9826125111C9B00E358E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D9826025111C9B00E358E4 /* Assets.xcassets */; };
+		B4D9826425111C9B00E358E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D9826225111C9B00E358E4 /* LaunchScreen.storyboard */; };
+		B4D9826F25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9826E25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift */; };
+		B4D9827A25111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9827925111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift */; };
+		D528A194449065A3A547F11B /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015EB2362A578A51338C3ABB /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4D9826B25111C9B00E358E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4D9824C25111C9700E358E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4D9825325111C9700E358E4;
+			remoteInfo = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+		};
+		B4D9827625111C9C00E358E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4D9824C25111C9700E358E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4D9825325111C9700E358E4;
+			remoteInfo = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		015EB2362A578A51338C3ABB /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		058F3CCCB7DF11BA9AC1B62F /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100063BAA28CB086F741BEE1 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.debug.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1571A94E4258BCA013C8D77E /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.debug.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		35E1D98FD5D9757F74E557ED /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig"; sourceTree = "<group>"; };
+		74DDB347A1B0A9951D2BD6B4 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig"; sourceTree = "<group>"; };
+		84276C39F958BB17EA99B010 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		B490545F2511AB4E00B2A632 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B49054612511AB5C00B2A632 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		B49054632511AB6800B2A632 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUpdateViewController.swift; sourceTree = "<group>"; };
+		B4CBC49E25120BE300121016 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		B4CBC4A025120CDB00121016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4CEDB9F2511E07A0094FDE4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B4CEDBA12511E0DB0094FDE4 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTipsViewController.swift; sourceTree = "<group>"; };
+		B4D9825425111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D9825725111C9700E358E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4D9825B25111C9700E358E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4D9826025111C9B00E358E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4D9826325111C9B00E358E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4D9826525111C9B00E358E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D9826A25111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D9826E25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift"; sourceTree = "<group>"; };
+		B4D9827025111C9B00E358E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D9827525111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D9827925111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift"; sourceTree = "<group>"; };
+		B4D9827B25111C9C00E358E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF94BA61E984EA7A03B4A0A0 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E1160A7F805D1C03DFA72F /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4D9825125111C9700E358E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ADECA1F1C9B263C4544525D /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9826725111C9B00E358E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CBB0FAFD9E9A128E0547E8 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9827225111C9B00E358E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D528A194449065A3A547F11B /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45E1EDD1D2FFFAF801120E0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35E1D98FD5D9757F74E557ED /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig */,
+				74DDB347A1B0A9951D2BD6B4 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig */,
+				1571A94E4258BCA013C8D77E /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.debug.xcconfig */,
+				E8E1160A7F805D1C03DFA72F /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig */,
+				100063BAA28CB086F741BEE1 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.debug.xcconfig */,
+				84276C39F958BB17EA99B010 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AE27878C7C48DE2664FB661 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				058F3CCCB7DF11BA9AC1B62F /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework */,
+				015EB2362A578A51338C3ABB /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework */,
+				BF94BA61E984EA7A03B4A0A0 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B490545A2511AA0500B2A632 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */,
+				B49054632511AB6800B2A632 /* SettingsViewController.swift */,
+				B490545F2511AB4E00B2A632 /* HomeViewController.swift */,
+				B49054612511AB5C00B2A632 /* UpdateViewController.swift */,
+				B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */,
+				B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */,
+				B4CBC49E25120BE300121016 /* SurveyViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4CEDB9E2511E0600094FDE4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B4CEDB9F2511E07A0094FDE4 /* Extensions.swift */,
+				B4CEDBA12511E0DB0094FDE4 /* LocationHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B4D9824B25111C9700E358E4 = {
+			isa = PBXGroup;
+			children = (
+				B4D9825625111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */,
+				B4D9826D25111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests */,
+				B4D9827825111C9C00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests */,
+				B4D9825525111C9700E358E4 /* Products */,
+				45E1EDD1D2FFFAF801120E0F /* Pods */,
+				8AE27878C7C48DE2664FB661 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4D9825525111C9700E358E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9825425111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app */,
+				B4D9826A25111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.xctest */,
+				B4D9827525111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4D9825625111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */ = {
+			isa = PBXGroup;
+			children = (
+				B4CEDB9E2511E0600094FDE4 /* Utils */,
+				B490545A2511AA0500B2A632 /* Controllers */,
+				B4D9825725111C9700E358E4 /* AppDelegate.swift */,
+				B4D9825B25111C9700E358E4 /* ViewController.swift */,
+				B4D9826025111C9B00E358E4 /* Assets.xcassets */,
+				B4D9826225111C9B00E358E4 /* LaunchScreen.storyboard */,
+				B4D9826525111C9B00E358E4 /* Info.plist */,
+				B4CBC4A025120CDB00121016 /* GoogleService-Info.plist */,
+			);
+			path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			sourceTree = "<group>";
+		};
+		B4D9826D25111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9826E25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift */,
+				B4D9827025111C9B00E358E4 /* Info.plist */,
+			);
+			path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests";
+			sourceTree = "<group>";
+		};
+		B4D9827825111C9C00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9827925111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift */,
+				B4D9827B25111C9C00E358E4 /* Info.plist */,
+			);
+			path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4D9825325111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D9827E25111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020" */;
+			buildPhases = (
+				4B01B90ECC45F63719AC2428 /* [CP] Check Pods Manifest.lock */,
+				B4D9825025111C9700E358E4 /* Sources */,
+				B4D9825125111C9700E358E4 /* Frameworks */,
+				B4D9825225111C9700E358E4 /* Resources */,
+				B58ECFC30ABEBB46A85E3ABD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			productName = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			productReference = B4D9825425111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4D9826925111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D9828125111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests" */;
+			buildPhases = (
+				D3AF930D8F73E6E4B4E364CA /* [CP] Check Pods Manifest.lock */,
+				B4D9826625111C9B00E358E4 /* Sources */,
+				B4D9826725111C9B00E358E4 /* Frameworks */,
+				B4D9826825111C9B00E358E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4D9826C25111C9B00E358E4 /* PBXTargetDependency */,
+			);
+			name = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests";
+			productName = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests";
+			productReference = B4D9826A25111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4D9827425111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4D9828425111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests" */;
+			buildPhases = (
+				7346FDDB6E1D50EF58A73F41 /* [CP] Check Pods Manifest.lock */,
+				B4D9827125111C9B00E358E4 /* Sources */,
+				B4D9827225111C9B00E358E4 /* Frameworks */,
+				B4D9827325111C9B00E358E4 /* Resources */,
+				8226B7E61753B6B1B025B723 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4D9827725111C9C00E358E4 /* PBXTargetDependency */,
+			);
+			name = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests";
+			productName = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests";
+			productReference = B4D9827525111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4D9824C25111C9700E358E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = NIBM;
+				TargetAttributes = {
+					B4D9825325111C9700E358E4 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					B4D9826925111C9B00E358E4 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = B4D9825325111C9700E358E4;
+					};
+					B4D9827425111C9B00E358E4 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = B4D9825325111C9700E358E4;
+					};
+				};
+			};
+			buildConfigurationList = B4D9824F25111C9700E358E4 /* Build configuration list for PBXProject "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4D9824B25111C9700E358E4;
+			productRefGroup = B4D9825525111C9700E358E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4D9825325111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */,
+				B4D9826925111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests */,
+				B4D9827425111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4D9825225111C9700E358E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4D9826425111C9B00E358E4 /* LaunchScreen.storyboard in Resources */,
+				B4D9826125111C9B00E358E4 /* Assets.xcassets in Resources */,
+				B4CBC4A125120CDB00121016 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9826825111C9B00E358E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9827325111C9B00E358E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B01B90ECC45F63719AC2428 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7346FDDB6E1D50EF58A73F41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8226B7E61753B6B1B025B723 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B58ECFC30ABEBB46A85E3ABD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AF930D8F73E6E4B4E364CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4D9825025111C9700E358E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B490545E2511AA9400B2A632 /* MainTabBarViewController.swift in Sources */,
+				B4CBC49F25120BE300121016 /* SurveyViewController.swift in Sources */,
+				B4D9825C25111C9700E358E4 /* ViewController.swift in Sources */,
+				B4D9825825111C9700E358E4 /* AppDelegate.swift in Sources */,
+				B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */,
+				B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */,
+				B4CEDBA42511E6730094FDE4 /* SafeTipsViewController.swift in Sources */,
+				B49054642511AB6800B2A632 /* SettingsViewController.swift in Sources */,
+				B4CEDBA02511E07A0094FDE4 /* Extensions.swift in Sources */,
+				B4CBC49B2511F5A300121016 /* TemperatureUpdateViewController.swift in Sources */,
+				B4CEDBA22511E0DB0094FDE4 /* LocationHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9826625111C9B00E358E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4D9826F25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4D9827125111C9B00E358E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4D9827A25111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4D9826C25111C9B00E358E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4D9825325111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */;
+			targetProxy = B4D9826B25111C9B00E358E4 /* PBXContainerItemProxy */;
+		};
+		B4D9827725111C9C00E358E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4D9825325111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */;
+			targetProxy = B4D9827625111C9C00E358E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4D9826225111C9B00E358E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4D9826325111C9B00E358E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4D9827C25111C9C00E358E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4D9827D25111C9C00E358E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4D9827F25111C9C00E358E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E1D98FD5D9757F74E557ED /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4D9828025111C9C00E358E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74DDB347A1B0A9951D2BD6B4 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4D9828225111C9C00E358E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100063BAA28CB086F741BEE1 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app/H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			};
+			name = Debug;
+		};
+		B4D9828325111C9C00E358E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84276C39F958BB17EA99B010 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.app/H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			};
+			name = Release;
+		};
+		B4D9828525111C9C00E358E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1571A94E4258BCA013C8D77E /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			};
+			name = Debug;
+		};
+		B4D9828625111C9C00E358E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E1160A7F805D1C03DFA72F /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nibm.H-E-R-U-MADURAPPERUMA---COBSCCOMP191P-020UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4D9824F25111C9700E358E4 /* Build configuration list for PBXProject "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D9827C25111C9C00E358E4 /* Debug */,
+				B4D9827D25111C9C00E358E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4D9827E25111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D9827F25111C9C00E358E4 /* Debug */,
+				B4D9828025111C9C00E358E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4D9828125111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D9828225111C9C00E358E4 /* Debug */,
+				B4D9828325111C9C00E358E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4D9828425111C9C00E358E4 /* Build configuration list for PBXNativeTarget "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4D9828525111C9C00E358E4 /* Debug */,
+				B4D9828625111C9C00E358E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4D9824C25111C9700E358E4 /* Project object */;
+}
