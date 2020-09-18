@@ -9,13 +9,24 @@
 /* Begin PBXBuildFile section */
 		17CBB0FAFD9E9A128E0547E8 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF94BA61E984EA7A03B4A0A0 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework */; };
 		4ADECA1F1C9B263C4544525D /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058F3CCCB7DF11BA9AC1B62F /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020.framework */; };
+		B407A21D2513443900BE65EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A21C2513443900BE65EA /* ProfileViewController.swift */; };
+		B407A221251344D500BE65EA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A220251344D500BE65EA /* Service.swift */; };
+		B407A2242513453400BE65EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A2232513453400BE65EA /* User.swift */; };
+		B407A226251346E900BE65EA /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A225251346E900BE65EA /* ContactViewController.swift */; };
+		B407A2282513475000BE65EA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A2272513475000BE65EA /* AuthViewController.swift */; };
+		B407A22C2513906700BE65EA /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A22B2513906700BE65EA /* LocationInputUIView.swift */; };
 		B490545E2511AA9400B2A632 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */; };
 		B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545F2511AB4E00B2A632 /* HomeViewController.swift */; };
 		B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49054612511AB5C00B2A632 /* UpdateViewController.swift */; };
 		B49054642511AB6800B2A632 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49054632511AB6800B2A632 /* SettingsViewController.swift */; };
+		B4AC59D92514928900F0DA2A /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC59D82514928900F0DA2A /* AuthButton.swift */; };
+		B4AC59DB251499F200F0DA2A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC59DA251499F200F0DA2A /* SignInViewController.swift */; };
+		B4AC59DD25149C0800F0DA2A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AC59DC25149C0800F0DA2A /* SignUpViewController.swift */; };
 		B4CBC49B2511F5A300121016 /* TemperatureUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */; };
-		B4CBC49F25120BE300121016 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC49E25120BE300121016 /* SurveyViewController.swift */; };
 		B4CBC4A125120CDB00121016 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4CBC4A025120CDB00121016 /* GoogleService-Info.plist */; };
+		B4CBC4A32512224B00121016 /* SurveyCvCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC4A22512224B00121016 /* SurveyCvCellViewController.swift */; };
+		B4CBC4A5251222A500121016 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC4A4251222A500121016 /* ResultViewController.swift */; };
+		B4CBC4A92512278E00121016 /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC4A82512278E00121016 /* SurveyCVCell.swift */; };
 		B4CEDBA02511E07A0094FDE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDB9F2511E07A0094FDE4 /* Extensions.swift */; };
 		B4CEDBA22511E0DB0094FDE4 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDBA12511E0DB0094FDE4 /* LocationHandler.swift */; };
 		B4CEDBA42511E6730094FDE4 /* SafeTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */; };
@@ -25,6 +36,8 @@
 		B4D9826425111C9B00E358E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D9826225111C9B00E358E4 /* LaunchScreen.storyboard */; };
 		B4D9826F25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9826E25111C9B00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.swift */; };
 		B4D9827A25111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9827925111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift */; };
+		B4FF9E852513DDD300270E46 /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9E842513DDD300270E46 /* SafeActionsViewController.swift */; };
+		B4FF9E892513DE5C00270E46 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FF9E882513DE5C00270E46 /* UserAnnotation.swift */; };
 		D528A194449065A3A547F11B /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015EB2362A578A51338C3ABB /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,13 +66,24 @@
 		35E1D98FD5D9757F74E557ED /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.debug.xcconfig"; sourceTree = "<group>"; };
 		74DDB347A1B0A9951D2BD6B4 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020.release.xcconfig"; sourceTree = "<group>"; };
 		84276C39F958BB17EA99B010 /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B407A21C2513443900BE65EA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B407A220251344D500BE65EA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B407A2232513453400BE65EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B407A225251346E900BE65EA /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		B407A2272513475000BE65EA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		B407A22B2513906700BE65EA /* LocationInputUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputUIView.swift; sourceTree = "<group>"; };
 		B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		B490545F2511AB4E00B2A632 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B49054612511AB5C00B2A632 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		B49054632511AB6800B2A632 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B4AC59D82514928900F0DA2A /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		B4AC59DA251499F200F0DA2A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B4AC59DC25149C0800F0DA2A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUpdateViewController.swift; sourceTree = "<group>"; };
-		B4CBC49E25120BE300121016 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		B4CBC4A025120CDB00121016 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4CBC4A22512224B00121016 /* SurveyCvCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCvCellViewController.swift; sourceTree = "<group>"; };
+		B4CBC4A4251222A500121016 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B4CBC4A82512278E00121016 /* SurveyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCVCell.swift; sourceTree = "<group>"; };
 		B4CEDB9F2511E07A0094FDE4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4CEDBA12511E0DB0094FDE4 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTipsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +99,8 @@
 		B4D9827525111C9B00E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D9827925111C9C00E358E4 /* H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020UITests.swift"; sourceTree = "<group>"; };
 		B4D9827B25111C9C00E358E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FF9E842513DDD300270E46 /* SafeActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
+		B4FF9E882513DE5C00270E46 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 		BF94BA61E984EA7A03B4A0A0 /* Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_H_E_R_U_MADURAPPERUMA___COBSCCOMP191P_020Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1160A7F805D1C03DFA72F /* Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig"; path = "Target Support Files/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests/Pods-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020-H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +156,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B407A21E251344A300BE65EA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B407A220251344D500BE65EA /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B407A2222513451300BE65EA /* models */ = {
+			isa = PBXGroup;
+			children = (
+				B407A2232513453400BE65EA /* User.swift */,
+				B4FF9E882513DE5C00270E46 /* UserAnnotation.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		B407A22A25138F7500BE65EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B407A22B2513906700BE65EA /* LocationInputUIView.swift */,
+				B4AC59D82514928900F0DA2A /* AuthButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B490545A2511AA0500B2A632 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +191,15 @@
 				B49054612511AB5C00B2A632 /* UpdateViewController.swift */,
 				B4CEDBA32511E6730094FDE4 /* SafeTipsViewController.swift */,
 				B4CBC49A2511F5A300121016 /* TemperatureUpdateViewController.swift */,
-				B4CBC49E25120BE300121016 /* SurveyViewController.swift */,
+				B4CBC4A22512224B00121016 /* SurveyCvCellViewController.swift */,
+				B4CBC4A4251222A500121016 /* ResultViewController.swift */,
+				B4CBC4A82512278E00121016 /* SurveyCVCell.swift */,
+				B407A21C2513443900BE65EA /* ProfileViewController.swift */,
+				B407A225251346E900BE65EA /* ContactViewController.swift */,
+				B407A2272513475000BE65EA /* AuthViewController.swift */,
+				B4FF9E842513DDD300270E46 /* SafeActionsViewController.swift */,
+				B4AC59DA251499F200F0DA2A /* SignInViewController.swift */,
+				B4AC59DC25149C0800F0DA2A /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +238,9 @@
 		B4D9825625111C9700E358E4 /* H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020 */ = {
 			isa = PBXGroup;
 			children = (
+				B407A22A25138F7500BE65EA /* View */,
+				B407A2222513451300BE65EA /* models */,
+				B407A21E251344A300BE65EA /* Service */,
 				B4CEDB9E2511E0600094FDE4 /* Utils */,
 				B490545A2511AA0500B2A632 /* Controllers */,
 				B4D9825725111C9700E358E4 /* AppDelegate.swift */,
@@ -447,16 +510,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B407A22C2513906700BE65EA /* LocationInputUIView.swift in Sources */,
+				B4CBC4A5251222A500121016 /* ResultViewController.swift in Sources */,
 				B490545E2511AA9400B2A632 /* MainTabBarViewController.swift in Sources */,
-				B4CBC49F25120BE300121016 /* SurveyViewController.swift in Sources */,
+				B407A221251344D500BE65EA /* Service.swift in Sources */,
+				B407A226251346E900BE65EA /* ContactViewController.swift in Sources */,
 				B4D9825C25111C9700E358E4 /* ViewController.swift in Sources */,
+				B4FF9E892513DE5C00270E46 /* UserAnnotation.swift in Sources */,
+				B407A2242513453400BE65EA /* User.swift in Sources */,
 				B4D9825825111C9700E358E4 /* AppDelegate.swift in Sources */,
+				B407A21D2513443900BE65EA /* ProfileViewController.swift in Sources */,
 				B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */,
 				B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */,
+				B4CBC4A32512224B00121016 /* SurveyCvCellViewController.swift in Sources */,
+				B4CBC4A92512278E00121016 /* SurveyCVCell.swift in Sources */,
+				B4FF9E852513DDD300270E46 /* SafeActionsViewController.swift in Sources */,
 				B4CEDBA42511E6730094FDE4 /* SafeTipsViewController.swift in Sources */,
 				B49054642511AB6800B2A632 /* SettingsViewController.swift in Sources */,
+				B4AC59D92514928900F0DA2A /* AuthButton.swift in Sources */,
+				B4AC59DD25149C0800F0DA2A /* SignUpViewController.swift in Sources */,
 				B4CEDBA02511E07A0094FDE4 /* Extensions.swift in Sources */,
 				B4CBC49B2511F5A300121016 /* TemperatureUpdateViewController.swift in Sources */,
+				B407A2282513475000BE65EA /* AuthViewController.swift in Sources */,
+				B4AC59DB251499F200F0DA2A /* SignInViewController.swift in Sources */,
 				B4CEDBA22511E0DB0094FDE4 /* LocationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

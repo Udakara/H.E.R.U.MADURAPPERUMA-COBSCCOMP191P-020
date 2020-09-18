@@ -21,97 +21,109 @@ class UpdateViewController: UIViewController {
     // Notifications tile
     
     private let notificationsTile: UIButton = {
-        let tileView = UIButton()
-        tileView.backgroundColor = .systemGray3
-        tileView.layer.cornerRadius = 5
-        tileView.layer.masksToBounds = true
-        tileView.addTarget(self, action: #selector(showNotifications), for: .touchUpInside)
-        return tileView
-    }()
+        let tile = UIButton()
+        tile.backgroundColor = .tileColor
+        tile.layer.cornerRadius = 5
+        tile.layer.masksToBounds = true
+        tile.addTarget(self, action: #selector(showNotifications), for: .touchUpInside)
+        
+        let title = UILabel()
+        title.text = "Create Notifications"
+        title.font = UIFont(name: "Avenir-Medium", size: 18)
+        title.textColor = UIColor.black
+        tile.addSubview(title)
+        title.anchor(left: tile.leftAnchor, paddingLeft: 20)
+        title.centerY(inView: tile)
+        
+        let arrow = UIImageView()
+        arrow.image = UIImage(systemName: "chevron.right")
+        arrow.tintColor = .black
+        arrow.layer.masksToBounds = true
+        tile.addSubview(arrow)
+        arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 24)
+        arrow.centerY(inView: tile)
+        
+        return tile    }()
     
-    private let notificationsTileLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Create Notifications"
-        label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = UIColor.black
-        label.backgroundColor = .systemGray3
-        return label
-    }()
-    
-    private let notificationsTileButton: UIButton = {
-        let button = UIButton(type: .custom)
-        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
-        button.setImage(UIImage(systemName: "chevron.right", withConfiguration: boldConfig), for: .normal)
-        button.backgroundColor = .systemGray
-        return button
-    }()
     
     // New survey tile
     
-    private let surveyTileUIView: UIView = {
-        let tileView = UIView()
-        tileView.backgroundColor = .white
-        tileView.layer.cornerRadius = 3
-        tileView.layer.masksToBounds = true
-        return tileView
-    }()
-    
     private let surveyTile: UIButton = {
-        let tileBtn = UIButton()
-        tileBtn.backgroundColor = .systemGray3
-        tileBtn.layer.cornerRadius = 3
-        tileBtn.layer.masksToBounds = true
-        //tileBtn.addTarget(self, action: #selector(showNewSurvey), for: .touchUpInside)
-        return tileBtn
-    }()
-    
-    private let surveyTileLabel: UILabel = {
-        let label = UILabel()
-        label.text = "New Survey"
-        label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = UIColor.black
-        //label.backgroundColor = .red
-        return label
-    }()
-    
-    private let surveyTileButton: UIButton = {
-        let button = UIButton(type: .custom)
-        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
-        button.setImage(UIImage(systemName: "chevron.right", withConfiguration: boldConfig), for: .normal)
-        button.backgroundColor = .systemGray
-        //button.addTarget(self, action: #selector(showNewSurvey), for: .touchUpInside)
-        return button
+        let tileView = UIButton()
+        tileView.backgroundColor = .tileColor
+        tileView.layer.cornerRadius = 5
+        tileView.layer.masksToBounds = true
+        tileView.addTarget(self, action: #selector(showNewSurvey), for: .touchUpInside)
+               
+        let title = UILabel()
+        title.text = "New Survey"
+        title.font = UIFont(name: "Avenir-Medium", size: 18)
+        title.textColor = UIColor.black
+        tileView.addSubview(title)
+        title.anchor(left: tileView.leftAnchor, paddingLeft: 20)
+        title.centerY(inView: tileView)
+               
+        let arrow = UIImageView()
+        arrow.image = UIImage(systemName: "chevron.right")
+        arrow.tintColor = .black
+        arrow.layer.masksToBounds = true
+        tileView.addSubview(arrow)
+        arrow.anchor(right: tileView.rightAnchor, paddingRight: 20, width: 14, height: 24)
+        arrow.centerY(inView: tileView)
+               
+        return tileView
     }()
     
     
     
     //new temperature tile
     
-    private let temperatureTile: UIButton = {
-        let tileBtn = UIButton()
-        tileBtn.backgroundColor = .systemGray3
-        tileBtn.layer.cornerRadius = 3
-        tileBtn.layer.masksToBounds = true
-        //tileBtn.addTarget(self, action: #selector(showNewSurvey), for: .touchUpInside)
-        return tileBtn
-    }()
-    
-    private let temperatureTileLabel: UILabel = {
-        let label = UILabel()
-        label.text = "update temperature"
-        label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = UIColor.black
-        //label.backgroundColor = .red
-        return label
-    }()
-    
-    private let temperatureTileButton: UIButton = {
-        let button = UIButton(type: .custom)
-        let boldConfig = UIImage.SymbolConfiguration(weight: .bold)
-        button.setImage(UIImage(systemName: "chevron.right", withConfiguration: boldConfig), for: .normal)
-        button.backgroundColor = .systemGray
-        button.addTarget(self, action: #selector(showTemperatureUpdate), for: .touchUpInside)
-        return button
+    private let temperatureTile: UIView = {
+        let tile = UIView()
+        tile.backgroundColor = .tileColor
+        tile.layer.cornerRadius = 5
+        tile.layer.masksToBounds = true
+        
+        let tempLbl = UILabel()
+        tempLbl.text = "35"
+        tempLbl.font = UIFont.systemFont(ofSize: 30)
+        tile.addSubview(tempLbl)
+        tempLbl.anchor(top: tile.topAnchor, paddingTop: 40)
+        tempLbl.centerX(inView: tile)
+        
+        let timeAgo = UILabel()
+        timeAgo.text = "Last Update: 1 Day ago"
+        timeAgo.font = UIFont.systemFont(ofSize: 12)
+        timeAgo.textColor = .darkGray
+        tile.addSubview(timeAgo)
+        timeAgo.anchor(top: tempLbl.bottomAnchor, paddingTop: 20)
+        timeAgo.centerX(inView: tile)
+        
+        let tempInput = UITextField()
+        tempInput.borderStyle = .roundedRect
+        tempInput.layer.borderColor = UIColor.black.cgColor
+        tempInput.layer.borderWidth = 0.5
+        tempInput.layer.cornerRadius = 5.0
+        tempInput.layer.masksToBounds = true
+        tile.addSubview(tempInput)
+        tempInput.anchor(top: timeAgo.bottomAnchor, paddingTop: 40, width: 100)
+        tempInput.centerX(inView: tile)
+        
+        let tempBtn = UIButton()
+        tempBtn.setTitle("UPDATE", for: .normal)
+        tempBtn.setTitleColor(.black, for: .normal)
+        tempBtn.backgroundColor = .tileArrow
+        tempBtn.layer.borderColor = UIColor.black.cgColor
+        tempBtn.layer.borderWidth = 1
+        tempBtn.layer.cornerRadius = 6.0
+        tempBtn.layer.masksToBounds = true
+        tempBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        tempBtn.addTextSpacing(2)
+        tile.addSubview(tempBtn)
+        tempBtn.anchor(top: tempInput.bottomAnchor, paddingTop: 35, width: 120, height: 40)
+        tempBtn.centerX(inView: tile)
+        
+        return tile
     }()
     
     
@@ -124,7 +136,7 @@ class UpdateViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        view.backgroundColor = .systemGray4
+        view.backgroundColor = .backgroundColor
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
@@ -132,40 +144,15 @@ class UpdateViewController: UIViewController {
         
         view.addSubview(notificationsTile)
         notificationsTile.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16, height: 70)
-        
-        view.addSubview(notificationsTileLabel)
-        notificationsTileLabel.anchor(top: notificationsTile.topAnchor, left: notificationsTile.leftAnchor, paddingLeft: 25)
-        notificationsTileLabel.centerY(inView: notificationsTile)
-        
-        view.addSubview(notificationsTileButton)
-        notificationsTileButton.anchor(top: notificationsTile.topAnchor, right: notificationsTile.rightAnchor, width: 60)
-        notificationsTileButton.centerY(inView: notificationsTile)
-        
         // survey tile
         
         view.addSubview(surveyTile)
         surveyTile.anchor(top: notificationsTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16, height: 70)
-
-        view.addSubview(surveyTileLabel)
-        surveyTileLabel.anchor(top: surveyTile.topAnchor, left: surveyTile.leftAnchor, paddingLeft: 25)
-        surveyTileLabel.centerY(inView: surveyTile)
-
-        view.addSubview(surveyTileButton)
-        surveyTileButton.anchor(top: surveyTile.topAnchor, right: surveyTile.rightAnchor, width: 60)
-        surveyTileButton.centerY(inView: surveyTile)
         
         //temperatire tile
         
         view.addSubview(temperatureTile)
-        temperatureTile.anchor(top: surveyTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16, height: 70)
-        
-        view.addSubview(temperatureTileLabel)
-        temperatureTileLabel.anchor(top: temperatureTile.topAnchor, left: temperatureTile.leftAnchor, paddingLeft: 25)
-        temperatureTileLabel.centerY(inView: temperatureTile)
-        
-        view.addSubview(temperatureTileButton)
-        temperatureTileButton.anchor(top: temperatureTile.topAnchor, right: temperatureTile.rightAnchor, width: 60)
-        temperatureTileButton.centerY(inView: temperatureTile)
+        temperatureTile.anchor(top: surveyTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 16, paddingRight: 16, height: 300)
     }
     
     
@@ -185,18 +172,14 @@ class UpdateViewController: UIViewController {
         }
     
     @objc func showTemperatureUpdate() {
-        let vc = TemperatureUpdateViewController()
-//        vc.hidesBottomBarWhenPushed = false
-        self.navigationController?.pushViewController(vc, animated: true)
+        let viewController = TemperatureUpdateViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
         
         @objc func showNewSurvey() {
-    //        let nav = UINavigationController(rootViewController: SurveyViewController())
-    //        nav.modalPresentationStyle = .fullScreen
-    //        self.present(nav, animated: true, completion: nil)
-//            let vc = SurveyViewController()
-//            vc.hidesBottomBarWhenPushed = true
-//            self.navigationController?.pushViewController(vc, animated: false)
+            let viewController = SurveyViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController, animated: false)
         }
     
 

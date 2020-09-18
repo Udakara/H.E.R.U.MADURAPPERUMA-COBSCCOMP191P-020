@@ -14,7 +14,11 @@ extension UIColor {
         return UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: alpha!)
     }
     
-    static let backgroundColor = rgb(red: 219, green: 211, blue: 211)
+    static let backgroundColor = rgb(red: 241, green: 243, blue: 248)
+    static let tileColor = rgb(red: 214, green: 224, blue: 240)
+    static let tileArrow = rgb(red: 141, green: 147, blue: 171)
+    static let tabBarBackground = rgb(red: 241, green: 243, blue: 248)
+    
     static let mainBlueTint = rgb(red: 17, green: 154, blue: 237)
     static let mainGrayTint = rgb(red: 25, green: 25, blue: 25)
 }

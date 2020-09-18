@@ -49,7 +49,6 @@ class TemperatureUpdateViewController: UIViewController {
     }
     
     @objc func handleGoBack() {
-        print("here")
         self.navigationController?.popToRootViewController(animated: true)
     }
     
