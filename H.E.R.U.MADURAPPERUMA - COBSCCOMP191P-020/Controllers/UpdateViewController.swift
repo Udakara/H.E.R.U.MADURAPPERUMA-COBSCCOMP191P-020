@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class UpdateViewController: UIViewController {
     
@@ -74,19 +75,33 @@ class UpdateViewController: UIViewController {
         return tileView
     }()
     
+    private let tmpText: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 0.5
+        textField.layer.cornerRadius = 5.0
+        textField.layer.masksToBounds = true
+        textField.keyboardType = .decimalPad
+        textField.textAlignment = .center
+        return textField
+    }()
     
+    private let tempLbl: UILabel = {
+        let label = UILabel()
+        label.text = "0°C"
+        label.font = UIFont.systemFont(ofSize: 35)
+        return label
+    }()
     
     //new temperature tile
     
-    private let temperatureTile: UIView = {
+    private lazy var temperatureTile: UIView = {
         let tile = UIView()
         tile.backgroundColor = .tileColor
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         
-        let tempLbl = UILabel()
-        tempLbl.text = "35"
-        tempLbl.font = UIFont.systemFont(ofSize: 30)
         tile.addSubview(tempLbl)
         tempLbl.anchor(top: tile.topAnchor, paddingTop: 40)
         tempLbl.centerX(inView: tile)
@@ -99,28 +114,23 @@ class UpdateViewController: UIViewController {
         timeAgo.anchor(top: tempLbl.bottomAnchor, paddingTop: 20)
         timeAgo.centerX(inView: tile)
         
-        let tempInput = UITextField()
-        tempInput.borderStyle = .roundedRect
-        tempInput.layer.borderColor = UIColor.black.cgColor
-        tempInput.layer.borderWidth = 0.5
-        tempInput.layer.cornerRadius = 5.0
-        tempInput.layer.masksToBounds = true
-        tile.addSubview(tempInput)
-        tempInput.anchor(top: timeAgo.bottomAnchor, paddingTop: 40, width: 100)
-        tempInput.centerX(inView: tile)
+        tile.addSubview(tmpText)
+        tmpText.anchor(top: timeAgo.bottomAnchor, paddingTop: 40, width: 100)
+        tmpText.centerX(inView: tile)
         
         let tempBtn = UIButton()
         tempBtn.setTitle("UPDATE", for: .normal)
-        tempBtn.setTitleColor(.black, for: .normal)
         tempBtn.backgroundColor = .tileArrow
+        tempBtn.setTitleColor(.black, for: .normal)
         tempBtn.layer.borderColor = UIColor.black.cgColor
-        tempBtn.layer.borderWidth = 1
-        tempBtn.layer.cornerRadius = 6.0
+        tempBtn.layer.borderWidth = 0.5
+        tempBtn.layer.cornerRadius = 5.0
         tempBtn.layer.masksToBounds = true
         tempBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         tempBtn.addTextSpacing(2)
+        tempBtn.addTarget(self, action: #selector(handleTempUpdate), for: .touchUpInside)
         tile.addSubview(tempBtn)
-        tempBtn.anchor(top: tempInput.bottomAnchor, paddingTop: 35, width: 120, height: 40)
+        tempBtn.anchor(top: tmpText.bottomAnchor, paddingTop: 35, width: 120, height: 40)
         tempBtn.centerX(inView: tile)
         
         return tile
@@ -171,16 +181,47 @@ class UpdateViewController: UIViewController {
 
         }
     
-    @objc func showTemperatureUpdate() {
-        let viewController = TemperatureUpdateViewController()
-        self.navigationController?.pushViewController(viewController, animated: true)
+    
+    @objc func handleTempUpdate() {
+        guard let temp = tmpText.text else { return }
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let temperatureValue = Float(temp)
+        
+        if temperatureValue == nil {
+            let alert = UIAlertController(title: "Temprature is Required!", message: "Please enter your body temprature", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if (temperatureValue! < 34.0) || (temperatureValue! > 47.0)  {
+            let alert = UIAlertController(title: "Invalid Temprature!", message: "Please insert valid Temprature", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        self.view.endEditing(true)
+        let values = [
+            "temperature": temp,
+            "tempDate": [".sv": "timestamp"]
+        ] as [String : Any]
+        self.uploadUserTemperature(uid: currentUid, values: values)
+        self.tmpText.text = ""
+    }
+    
+    
+    func uploadUserTemperature(uid: String, values: [String: Any]) {
+        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+            if error == nil {
+                self.tempLbl.text = "\(values["temperature"] as? String ?? "0")°C"
+            }
+        }
     }
         
-        @objc func showNewSurvey() {
+    @objc func showNewSurvey() {
             let viewController = SurveyViewController()
             viewController.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(viewController, animated: false)
-        }
+    }
     
 
     /*

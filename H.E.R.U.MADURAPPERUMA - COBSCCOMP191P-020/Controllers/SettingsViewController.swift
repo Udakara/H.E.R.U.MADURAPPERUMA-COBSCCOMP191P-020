@@ -25,87 +25,77 @@ class SettingsViewController: UIViewController {
     
     private let profileTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .tileColor
+        tile.layer.cornerRadius = 5
+        tile.layer.masksToBounds = true
+        tile.addTarget(self, action: #selector(showProfile), for: .touchUpInside)
         
         let title = UILabel()
         title.text = "Profile"
-        title.textColor = .black
+        title.font = UIFont(name: "Avenir-Medium", size: 18)
+        title.textColor = UIColor.black
         tile.addSubview(title)
-        //title.backgroundColor = .green
-        title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
+        title.anchor(left: tile.leftAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         
         let arrow = UIImageView()
         arrow.image = UIImage(systemName: "chevron.right")
-        //arrow.backgroundColor = .green
         arrow.tintColor = .black
         arrow.layer.masksToBounds = true
         tile.addSubview(arrow)
         arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 24)
         arrow.centerY(inView: tile)
         
-        let separatorView = UIView()
-        separatorView.backgroundColor = .lightGray
-        tile.addSubview(separatorView)
-        separatorView.anchor(left: tile.leftAnchor, bottom: tile.bottomAnchor, right: tile.rightAnchor, paddingLeft: 8, paddingRight: 8, height: 0.75)
-        
-        tile.addTarget(self, action: #selector(showProfile), for: .touchUpInside)
-        
-        return tile
-    }()
+        return tile    }()
     
     private let contactTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .tileColor
+        tile.layer.cornerRadius = 5
+        tile.layer.masksToBounds = true
+        tile.addTarget(self, action: #selector(showContact), for: .touchUpInside)
         
         let title = UILabel()
-        title.text = "Contact Us / About Us"
-        title.textColor = .black
+        title.text = "Contact Us/ About Us"
+        title.font = UIFont(name: "Avenir-Medium", size: 18)
+        title.textColor = UIColor.black
         tile.addSubview(title)
-        //title.backgroundColor = .green
-        title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
+        title.anchor(left: tile.leftAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         
         let arrow = UIImageView()
         arrow.image = UIImage(systemName: "chevron.right")
-        //arrow.backgroundColor = .green
         arrow.tintColor = .black
         arrow.layer.masksToBounds = true
         tile.addSubview(arrow)
         arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 24)
         arrow.centerY(inView: tile)
-        
-        let separatorView = UIView()
-        separatorView.backgroundColor = .lightGray
-        tile.addSubview(separatorView)
-        separatorView.anchor(left: tile.leftAnchor, bottom: tile.bottomAnchor, right: tile.rightAnchor, paddingLeft: 8, paddingRight: 8, height: 0.75)
-        
-        tile.addTarget(self, action: #selector(showContact), for: .touchUpInside)
         
         return tile
     }()
     
     private let shareTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .tileColor
+        tile.layer.cornerRadius = 5
+        tile.layer.masksToBounds = true
+        tile.addTarget(self, action: #selector(handleShare), for: .touchUpInside)
         
         let title = UILabel()
         title.text = "Share with friend"
-        title.textColor = .systemBlue
+        title.font = UIFont(name: "Avenir-Medium", size: 18)
+        title.textColor = UIColor.black
         tile.addSubview(title)
-        //title.backgroundColor = .green
-        title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
+        title.anchor(left: tile.leftAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         
         let arrow = UIImageView()
         arrow.image = UIImage(systemName: "chevron.right")
-        //arrow.backgroundColor = .green
+        arrow.tintColor = .black
         arrow.layer.masksToBounds = true
         tile.addSubview(arrow)
         arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 24)
         arrow.centerY(inView: tile)
-                
-        tile.addTarget(self, action: #selector(handleShare), for: .touchUpInside)
         
         return tile
     }()
@@ -124,7 +114,7 @@ class SettingsViewController: UIViewController {
     
     private let logoutButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.backgroundColor = .tileArrow
         button.setTitle("LOGOUT", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
@@ -166,7 +156,7 @@ class SettingsViewController: UIViewController {
     func configUI() {
         configNavBar()
         
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .backgroundColor
         
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)
@@ -175,10 +165,10 @@ class SettingsViewController: UIViewController {
         let stack = UIStackView(arrangedSubviews: [profileTile, contactTile, shareTile])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
-        stack.spacing = 0
+        stack.spacing = 10
         
         view.addSubview(stack)
-        stack.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, height: 210)
+        stack.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16, height: 250)
         
         view.addSubview(logoutButton)
         logoutButton.anchor(left: view.leftAnchor, bottom: safeArea.bottomAnchor, right: view.rightAnchor, height: 60)

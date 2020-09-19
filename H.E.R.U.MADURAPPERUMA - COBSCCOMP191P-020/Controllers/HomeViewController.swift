@@ -254,9 +254,14 @@ class HomeViewController: UIViewController {
     
     func fetchOtherUsers() {
         guard let location = locationManager?.location else { return }
+        guard let currentUserId  = Auth.auth().currentUser?.uid else {return}
+        
         Service.shared.fetchUsersLocation(location: location) { (driver) in
             guard let coordinate = driver.location?.coordinate else { return }
             let annotation = UserAnnotation(uid: driver.uid, coordinate: coordinate)
+            
+            let temp = Float(driver.temperature)!
+            let result = driver.surveyResult
             
             var driverIsVisible: Bool {
                 
@@ -264,8 +269,10 @@ class HomeViewController: UIViewController {
                     guard let driverAnno = annotation as? UserAnnotation else { return false }
                     
                     if driverAnno.uid == driver.uid {
+                        if temp >= 38.0 && result >= 60 {
                         driverAnno.updateAnnotationPosition(withCoordinate: coordinate)
                         return true
+                        }
                     }
                     
                     return false
@@ -273,7 +280,12 @@ class HomeViewController: UIViewController {
             }
             
             if !driverIsVisible {
-                self.mapView.addAnnotation(annotation)
+                if driver.uid != currentUserId {
+                    if temp >= 38.0 && result >= 3 {
+                        self.mapView.addAnnotation(annotation)
+                       // self.notifyUser()
+                    }
+                }
             }
         }
     }
@@ -338,7 +350,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? UserAnnotation {
             let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .green)
+            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .red)
             return view
         }
         return nil

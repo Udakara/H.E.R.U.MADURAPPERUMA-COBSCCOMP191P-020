@@ -30,7 +30,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
         self.title="Survey"
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .backgroundColor
         
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -51,7 +51,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.view.addSubview(myCollectionView)
         
         let que1 = Question(imgName: "SQ01", questionText: "Are you having any symptoms above?", accept: false, isAnswered: false)
-        let que2 = Question(imgName: "SQ01", questionText: "Have you keep the distance between?", accept: false, isAnswered: false)
+        let que2 = Question(imgName: "Distance", questionText: "Have you keep the distance between?", accept: false, isAnswered: false)
         let que3 = Question(imgName: "SQ01", questionText: "Have you been exposed with crowded places?", accept: false, isAnswered: false)
         let que4 = Question(imgName: "SQ01", questionText: "Have you been interact with any sick person recently?", accept: false, isAnswered: false)
         questionsArray = [que1, que2, que3, que4]

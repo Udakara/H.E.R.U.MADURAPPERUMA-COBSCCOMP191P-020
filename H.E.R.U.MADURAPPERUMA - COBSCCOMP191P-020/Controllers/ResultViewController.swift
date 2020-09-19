@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ResultViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         self.view.backgroundColor = .white
-        setupViews()
+        setupView()
     }
     
     func showRating() {
@@ -41,13 +42,14 @@ class ResultViewController: UIViewController {
         }
         lblRating.text = "\(rating)"
         lblRating.textColor=color
+        updateResult()
     }
     
     @objc func btnGoBackAction() {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func setupViews() {
+    func setupView() {
         
         self.view.addSubview(lblTitle)
         lblTitle.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80).isActive=true
@@ -118,6 +120,28 @@ class ResultViewController: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    
+    func updateResult() {
+        guard let result = result else { return }
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        let values = [
+            "surveyResult": result,
+            "surveyDate": [".sv": "timestamp"]
+        ] as [String : Any]
+        
+        self.uploadResult(uid: currentUid, values: values)
+    }
+    
+    func uploadResult(uid: String, values: [String: Any]) {
+        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+            if error == nil {
+                print("No error")
+            }else {
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
 
 }
 

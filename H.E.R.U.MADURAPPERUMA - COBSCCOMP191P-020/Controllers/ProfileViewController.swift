@@ -11,12 +11,17 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
-    // MARK: - Properties
-    
     var safeArea: UILayoutGuide!
     
     var user: User? {
-        didSet { titleLbl.text = "\(user!.firstName) \(user!.lastName)" }
+        didSet {
+            titleLbl.text = "\(user!.firstName) \(user!.lastName)"
+            firstNameTF.text = user!.firstName
+            lastNameTF.text = user!.lastName
+            indexTF.text = user!.index
+            countryTF.text = user!.country
+            tempLbl.text = "\(user!.temperature)°C"
+        }
     }
     
     private let backButton: UIButton = {
@@ -36,40 +41,140 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    private let blankView: UIView = {
-        let blank = UIView()
-        blank.backgroundColor = .white
-        return blank
+    private let avatar: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "avatar")
+        image.layer.cornerRadius = 50;
+        image.layer.masksToBounds = true
+        image.clipsToBounds = true
+        return image
     }()
     
-   private let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        imageView.image = UIImage(named: "SQ01")
-        imageView.layer.cornerRadius = imageView.frame.width / 2;
-        imageView.layer.masksToBounds = true
+    private let bioLbl: UILabel = {
+        let label = UILabel()
+        label.text = "Acme user since Aug 2020 at Matara, Sri Lanka"
+        label.textColor = .black
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
+    private let tempLbl: UILabel = {
+        let label = UILabel()
+        label.text = "0°C"
+        label.textColor = .black
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
+    private let firstNameTF: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.placeholder = "First Name"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .sentences
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 0.5
+        textField.layer.cornerRadius = 5.0
+        textField.layer.masksToBounds = true
+        return textField
+    }()
+    
+    private let lastNameTF: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.placeholder = "Last Name"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .sentences
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 0.5
+        textField.layer.cornerRadius = 5.0
+        textField.layer.masksToBounds = true
+        return textField
+    }()
+    
+    private let indexTF: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.placeholder = "Index"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .sentences
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 0.5
+        textField.layer.cornerRadius = 5.0
+        textField.layer.masksToBounds = true
+        return textField
+    }()
+    
+    private let countryTF: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.font = UIFont.systemFont(ofSize: 16)
+        textField.placeholder = "Country"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .sentences
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 0.5
+        textField.layer.cornerRadius = 5.0
+        textField.layer.masksToBounds = true
+        return textField
+    }()
+    
+    private let updateButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .tileArrow
+        button.setTitle("UPDATE", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+        button.addTextSpacing(2)
+        button.addTarget(self, action: #selector(handleUpdate), for: .touchUpInside)
+        return button
+    }()
+    
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        let screensize: CGRect = UIScreen.main.bounds
+        scroll.contentSize = CGSize(width: screensize.width, height: screensize.height)
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        return scroll
+    }()
+    
+    private lazy var mainTile: UIView = {
+        let tile = UIView()
+        tile.backgroundColor = .backgroundColor
         
-        return imageView
-    }()
-    
-    private let nameTextField: UITextField = {
-           return UITextField().textField(withPlaceholder: "name", isSecureTextEntry: false)
-       }()
-    
-    private lazy var firstNameContainerView: UIView = {
-        let view = UIView().inputContainerView(textField: nameTextField )
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        return view
-    }()
-    
-    private let indexTextField: UITextField = {
-        return UITextField().textField(withPlaceholder: "index", isSecureTextEntry: false)
-    }()
-    
-    private lazy var indexContainerView: UIView = {
-        let view = UIView().inputContainerView(textField: indexTextField  )
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        return view
+        tile.addSubview(updateButton)
+        updateButton.anchor(left: tile.leftAnchor, bottom: tile.bottomAnchor, right: tile.rightAnchor, height: 60)
+        
+        let separatorView = UIView()
+        separatorView.backgroundColor = .backgroundColor
+        tile.addSubview(separatorView)
+        separatorView.anchor(left: tile.leftAnchor, bottom: updateButton.topAnchor, right: tile.rightAnchor, paddingLeft: 8, paddingRight: 8, height: 0.75)
+        
+        tile.addSubview(scrollView)
+        scrollView.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: separatorView.topAnchor, right: tile.rightAnchor)
+        
+        scrollView.addSubview(avatar)
+        avatar.anchor(top: scrollView.topAnchor, paddingTop: 30, width: 100, height: 100)
+        avatar.centerX(inView: scrollView)
+        
+        scrollView.addSubview(tempLbl)
+        tempLbl.anchor(top: avatar.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        tempLbl.centerX(inView: scrollView)
+        
+        let stack = UIStackView(arrangedSubviews: [firstNameTF, lastNameTF, indexTF, countryTF])
+        stack.axis = .vertical
+        stack.distribution = .fillProportionally
+        stack.spacing = 30
+        scrollView.addSubview(stack)
+        stack.anchor(top: tempLbl.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 40, paddingLeft: 16, paddingRight: 16)
+        
+        return tile
     }()
     
     override func viewDidLoad() {
@@ -77,6 +182,7 @@ class ProfileViewController: UIViewController {
         safeArea = view.layoutMarginsGuide
         fetchUserData()
         configUI()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Selectors
@@ -84,29 +190,58 @@ class ProfileViewController: UIViewController {
     @objc func handleGoBack() {
         self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    @objc func handleUpdate() {
+        guard let firstName = firstNameTF.text else { return }
+        guard let lastName = lastNameTF.text else { return }
+        guard let index = indexTF.text else { return }
+        guard let country = countryTF.text else { return }
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        if firstName.isEmpty {
+            let alert = UIAlertController(title: "First name field is empty", message: "Please enter your first name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if lastName.isEmpty  {
+            let alert = UIAlertController(title: "Last Name field is empty", message: "Please enter your last name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if index.isEmpty  {
+            let alert = UIAlertController(title: "Index field is empty", message: "Please enter your index", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        } else if country.isEmpty  {
+            let alert = UIAlertController(title: "Country field is empty", message: "Please enter your country", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        self.view.endEditing(true)
+        let values = [
+            "firstName": firstName,
+            "lastName": lastName,
+            "index": index,
+            "country": country,
+            "profileDate": [".sv": "timestamp"]
+        ] as [String : Any]
+        self.uploadUserProfile(uid: currentUid, values: values)
+        
+    }
 
     func configUI() {
         configNavBar()
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundColor
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)
         titleLbl.centerX(inView: view)
         view.addSubview(backButton)
         backButton.anchor(top: safeArea.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16, width: 38, height: 38)
-//        view.addSubview(blankView)
-//        blankView.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: safeArea.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
-        view.addSubview(logoImageView)
-        logoImageView.anchor(top: titleLbl.bottomAnchor, paddingTop: 100, width: 140, height: 140)
-        logoImageView.centerX(inView: view)
-        
-        let stack = UIStackView(arrangedSubviews: [firstNameContainerView,indexContainerView])
-        stack.axis = .vertical
-        stack.distribution = .fillEqually
-        stack.spacing = 20
-        
-        view.addSubview(stack)
-        stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 16, paddingRight: 16)
-        
+        view.addSubview(mainTile)
+        mainTile.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
     }
     
     func configNavBar() {
@@ -117,11 +252,19 @@ class ProfileViewController: UIViewController {
     // MARK: - API
     
     func fetchUserData() {
-        print("here")
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        print(currentUid)
         Service.shared.fetchUserData(uid: currentUid) { (user) in
             self.user = user
+        }
+    }
+    
+    func uploadUserProfile(uid: String, values: [String: Any]) {
+        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+            if error == nil {
+                let alert = UIAlertController(title: "Success!", message: "successfully updated your profile", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
         }
     }
 
