@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import MapKit
+import AVFoundation
 
 private let reuseIdentifier = "LocationCell"
 private let annotationIdentifier = "UserAnnotation"
@@ -33,7 +34,7 @@ class HomeViewController: UIViewController {
         tile.backgroundColor = .backgroundColor
         
         let avatar = UIImageView()
-        avatar.image = UIImage(named: "covidLogo")
+        avatar.image = UIImage(named: "stopCorona")
         tile.addSubview(avatar)
         avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 125, height: 125)
         avatar.centerY(inView: tile)
@@ -118,6 +119,7 @@ class HomeViewController: UIViewController {
         moreBtn.setTitle("See More", for: .normal)
         moreBtn.setTitleColor(.black, for: .normal)
         moreBtn.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+        moreBtn.addTarget(self, action: #selector(showFullMap), for: .touchUpInside)
         tile.addSubview(moreBtn)
         moreBtn.anchor(top: tile.topAnchor, right: tile.rightAnchor, paddingTop: 14, paddingRight: 16)
         
@@ -212,7 +214,7 @@ class HomeViewController: UIViewController {
     
     private let mapTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .black
+        tile.backgroundColor = .backgroundColor
         return tile
     }()
     
@@ -234,9 +236,6 @@ class HomeViewController: UIViewController {
     
     @objc func showNotific() {
         print("notific")
-//        let vc = SafeActionsViewController()
-//        vc.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func showSafeActions() {
@@ -245,6 +244,11 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func showFullMap() {
+        let vc = FullMapViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     func fetchUserData() {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         Service.shared.fetchUserData(uid: currentUid) { (user) in
@@ -283,7 +287,7 @@ class HomeViewController: UIViewController {
                 if driver.uid != currentUserId {
                     if temp >= 38.0 && result >= 3 {
                         self.mapView.addAnnotation(annotation)
-                       // self.notifyUser()
+                        self.warnUser()
                     }
                 }
             }
@@ -366,6 +370,15 @@ extension HomeViewController: MKMapViewDelegate {
         }
         return MKOverlayRenderer()
     }
+    
+    func warnUser(){
+        if !UIApplication.topViewController()!.isKind(of: UIAlertController.self) {
+            AudioServicesPlayAlertSound(SystemSoundID(1012))
+            let alert = UIAlertController(title: "Warning!", message: "You are near a COVID-19 infected person", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
 }
 
 // MARK: - LocationServices
@@ -400,6 +413,25 @@ extension MKAnnotationView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         self.image = image
+    }
+    
+}
+
+extension UIApplication {
+    
+    public class func topViewController(_ base: UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(presented)
+        }
+        return base
     }
     
 }

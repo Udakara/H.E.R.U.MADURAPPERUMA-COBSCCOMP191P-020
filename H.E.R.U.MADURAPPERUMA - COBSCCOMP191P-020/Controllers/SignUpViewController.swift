@@ -89,6 +89,7 @@ class SignUpViewController: UIViewController {
         let button = AuthButton(type: .system)
         button.setTitle("Create an Account", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
+        button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .tileArrow
         button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         return button

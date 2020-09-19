@@ -22,7 +22,7 @@ class AuthViewController: UIViewController {
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        imageView.image = UIImage(named: "COVID19")
+        imageView.image = UIImage(named: "stopCorona")
         imageView.layer.cornerRadius = imageView.frame.width / 2;
         imageView.layer.masksToBounds = true
         
@@ -34,7 +34,7 @@ class AuthViewController: UIViewController {
         button.setTitle("Create an Account", for: .normal)
         button.backgroundColor = .tileArrow
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
-        button.titleLabel?.textColor = .black
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(showSignUpPage), for: .touchUpInside)
         
         return button
@@ -42,7 +42,7 @@ class AuthViewController: UIViewController {
     
     private let signinPageButton: UIButton = {
         let button = UIButton(type: .system)
-        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
+        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)])
         button.addTarget(self, action: #selector(showSignInPage), for: .touchUpInside)
         button.setAttributedTitle(buttonTitle, for: .normal)
         

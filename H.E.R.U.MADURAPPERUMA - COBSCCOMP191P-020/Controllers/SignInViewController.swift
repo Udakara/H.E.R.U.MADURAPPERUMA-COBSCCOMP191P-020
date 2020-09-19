@@ -51,13 +51,14 @@ class SignInViewController: UIViewController {
         button.setTitle("Sign In", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
         button.backgroundColor = .tileArrow
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
         return button
     }()
     
     private let signupPageButton: UIButton = {
         let button = UIButton(type: .system)
-        let buttonTitle = NSMutableAttributedString(string: "Don't have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
+        let buttonTitle = NSMutableAttributedString(string: "Don't have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)])
         button.addTarget(self, action: #selector(showSignUpPage), for: .touchUpInside)
         button.setAttributedTitle(buttonTitle, for: .normal)
         return button

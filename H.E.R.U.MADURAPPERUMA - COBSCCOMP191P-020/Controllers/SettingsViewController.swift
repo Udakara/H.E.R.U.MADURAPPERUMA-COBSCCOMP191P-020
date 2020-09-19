@@ -102,7 +102,7 @@ class SettingsViewController: UIViewController {
     
     private let blankView: UIView = {
         let blank = UIView()
-        blank.backgroundColor = .white
+        blank.backgroundColor = .backgroundColor
         
         let separatorView = UIView()
         separatorView.backgroundColor = .lightGray
