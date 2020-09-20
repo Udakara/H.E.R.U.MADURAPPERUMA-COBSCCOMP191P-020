@@ -11,6 +11,7 @@ import FirebaseAuth
 import MapKit
 import AVFoundation
 import LocalAuthentication
+import GeoFire
 
 private let reuseIdentifier = "LocationCell"
 private let annotationIdentifier = "UserAnnotation"
@@ -283,6 +284,29 @@ class HomeViewController: UIViewController {
         enableLocationServices()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.fetchOtherUsers()
+        self.updateUserLocation()
+    }
+    
+    func updateUserLocation() {
+        guard let location = locationManager?.location else { return }
+        let receivedLocation : CLLocation! = nil
+        
+        if !(Auth.auth().currentUser?.uid == nil) && (receivedLocation != nil) {
+            let uid = (Auth.auth().currentUser?.uid)!
+            let geoFire = GeoFire(firebaseRef: REF_USER_LOCATIONS)
+                
+            geoFire.setLocation(location, forKey: uid) { (error) in
+                if (error != nil) {
+                    print("An error occured: \(error!)")
+                } else {
+                    print("Saved location successfully!")
+                }
+            }
+        }
+    }
+    
     @objc func showNotific() {
         print("notific")
     }
@@ -324,10 +348,12 @@ class HomeViewController: UIViewController {
                     if driverAnno.uid == driver.uid {
                         if temp >= 38.0 && result >= 60 {
                         driverAnno.updateAnnotationPosition(withCoordinate: coordinate)
-                        return true
+                        
+                        }else {
+                            self.mapView.removeAnnotation(annotation)
                         }
+                        return true
                     }
-                    
                     return false
                 }
             }
