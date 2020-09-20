@@ -45,5 +45,9 @@
 	<string>Please allow us to access your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please allow us to access your location</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Please allow us to access your Face ID</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow us to access your Camera</string>
 </dict>
 </plist>

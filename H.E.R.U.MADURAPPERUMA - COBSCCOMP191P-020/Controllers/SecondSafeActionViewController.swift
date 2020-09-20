@@ -1,17 +1,15 @@
 //
-//  SafeActionsViewController.swift
+//  SecondSafeActionViewController.swift
 //  H.E.R.U.MADURAPPERUMA - COBSCCOMP191P-020
 //
-//  Created by Ruhith on 6/27/1399 AP.
+//  Created by Ruhith on 6/30/1399 AP.
 //  Copyright © 1399 NIBM. All rights reserved.
 //
 
 import UIKit
 
-class SafeActionsViewController: UIViewController {
-    
-    // MARK: - Properties
-        
+class SecondSafeActionViewController: UIViewController {
+
     private let titleLabel: UILabel = {
                 let label = UILabel()
                 label.text = "Safe Actions"
@@ -24,7 +22,7 @@ class SafeActionsViewController: UIViewController {
     private lazy var WelcomeImgView: UIImageView = {
                 let imageview = UIImageView()
                 imageview.frame = CGRect(x: 0, y: 0, width: 400, height:600)
-                imageview.image = UIImage(named:"washingHands")
+                imageview.image = UIImage(named:"safeAction2")
                 imageview.layer.masksToBounds = true
                 return imageview
                 
@@ -32,7 +30,7 @@ class SafeActionsViewController: UIViewController {
     
     private let warningLabel: UILabel = {
                    let warningLabel = UILabel()
-                   warningLabel.text = "Clean yourself"
+                   warningLabel.text = "Don't touch your face"
                  warningLabel.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
                    warningLabel.textColor = .black
                    
@@ -41,7 +39,7 @@ class SafeActionsViewController: UIViewController {
         
     private let questionOneLabel: UILabel = {
                       let questionOneLabel = UILabel()
-                      questionOneLabel.text = "Wash your hand regularly with soap and water"
+                      questionOneLabel.text = "alwayse use a tissue and don't touch your face"
                       questionOneLabel.font = UIFont(name: "Avenir-Light", size: 18)
                       questionOneLabel.textColor = .black
                       return questionOneLabel
@@ -67,7 +65,7 @@ class SafeActionsViewController: UIViewController {
             }
         
     @objc func handleNext() {
-                let vc = SecondSafeActionViewController()
+                let vc = ThirdSafeActionViewController()
                 navigationController?.pushViewController(vc, animated: false)
             }
             
@@ -102,5 +100,15 @@ class SafeActionsViewController: UIViewController {
                 navigationController?.navigationBar.isHidden = true
                 navigationController?.navigationBar.barStyle = .default
             }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

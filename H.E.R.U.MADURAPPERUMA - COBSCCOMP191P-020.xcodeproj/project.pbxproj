@@ -16,6 +16,8 @@
 		B407A2282513475000BE65EA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A2272513475000BE65EA /* AuthViewController.swift */; };
 		B407A22C2513906700BE65EA /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407A22B2513906700BE65EA /* LocationInputUIView.swift */; };
 		B42618B0251685DF00C305A2 /* FullMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42618AF251685DF00C305A2 /* FullMapViewController.swift */; };
+		B4742D4A2517359E00FC56CA /* SecondSafeActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742D492517359E00FC56CA /* SecondSafeActionViewController.swift */; };
+		B4742D4E25173DCA00FC56CA /* ThirdSafeActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742D4D25173DCA00FC56CA /* ThirdSafeActionViewController.swift */; };
 		B490545E2511AA9400B2A632 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */; };
 		B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B490545F2511AB4E00B2A632 /* HomeViewController.swift */; };
 		B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49054612511AB5C00B2A632 /* UpdateViewController.swift */; };
@@ -74,6 +76,8 @@
 		B407A2272513475000BE65EA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		B407A22B2513906700BE65EA /* LocationInputUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputUIView.swift; sourceTree = "<group>"; };
 		B42618AF251685DF00C305A2 /* FullMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMapViewController.swift; sourceTree = "<group>"; };
+		B4742D492517359E00FC56CA /* SecondSafeActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSafeActionViewController.swift; sourceTree = "<group>"; };
+		B4742D4D25173DCA00FC56CA /* ThirdSafeActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSafeActionViewController.swift; sourceTree = "<group>"; };
 		B490545D2511AA9400B2A632 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		B490545F2511AB4E00B2A632 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B49054612511AB5C00B2A632 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				B4AC59DA251499F200F0DA2A /* SignInViewController.swift */,
 				B4AC59DC25149C0800F0DA2A /* SignUpViewController.swift */,
 				B42618AF251685DF00C305A2 /* FullMapViewController.swift */,
+				B4742D492517359E00FC56CA /* SecondSafeActionViewController.swift */,
+				B4742D4D25173DCA00FC56CA /* ThirdSafeActionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,7 +533,9 @@
 				B49054602511AB4E00B2A632 /* HomeViewController.swift in Sources */,
 				B49054622511AB5C00B2A632 /* UpdateViewController.swift in Sources */,
 				B4CBC4A32512224B00121016 /* SurveyCvCellViewController.swift in Sources */,
+				B4742D4E25173DCA00FC56CA /* ThirdSafeActionViewController.swift in Sources */,
 				B4CBC4A92512278E00121016 /* SurveyCVCell.swift in Sources */,
+				B4742D4A2517359E00FC56CA /* SecondSafeActionViewController.swift in Sources */,
 				B4FF9E852513DDD300270E46 /* SafeActionsViewController.swift in Sources */,
 				B4CEDBA42511E6730094FDE4 /* SafeTipsViewController.swift in Sources */,
 				B49054642511AB6800B2A632 /* SettingsViewController.swift in Sources */,

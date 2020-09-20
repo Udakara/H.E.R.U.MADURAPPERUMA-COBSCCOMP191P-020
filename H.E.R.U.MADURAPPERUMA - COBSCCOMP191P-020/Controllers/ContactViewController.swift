@@ -26,15 +26,80 @@ class ContactViewController: UIViewController {
     private let titleLbl: UILabel = {
         let label = UILabel()
         label.text = "Contact Us / About Us"
+        label.adjustsFontSizeToFitWidth = true
         label.font = UIFont(name: "Avenir-Light", size: 26)
         label.textColor = .black
         return label
     }()
     
-    private let blankView: UIView = {
-        let blank = UIView()
-        blank.backgroundColor = .white
-        return blank
+    private let mainTile: UIView = {
+        let tile = UIView()
+        tile.backgroundColor = .backgroundColor
+        
+        let headOfficeLbl = UILabel()
+        headOfficeLbl.text = "NIBM"
+        headOfficeLbl.adjustsFontSizeToFitWidth = true
+        headOfficeLbl.font = UIFont.systemFont(ofSize: 18)
+        headOfficeLbl.textAlignment = .center
+        headOfficeLbl.textColor = .black
+        
+        tile.addSubview(headOfficeLbl)
+        headOfficeLbl.anchor(top: tile.topAnchor, paddingTop: 40)
+        headOfficeLbl.centerX(inView: tile)
+        
+        let phoneLbl = UILabel()
+        phoneLbl.text = "Phone No : +94 772801596"
+        phoneLbl.adjustsFontSizeToFitWidth = true
+        phoneLbl.font = UIFont.systemFont(ofSize: 14)
+        phoneLbl.textAlignment = .center
+        phoneLbl.textColor = .black
+        
+        tile.addSubview(phoneLbl)
+        phoneLbl.anchor(top: headOfficeLbl.bottomAnchor, paddingTop: 40)
+        phoneLbl.centerX(inView: tile)
+        
+        let addrLbl = UILabel()
+        addrLbl.text = "Address: 120/5 Vidya Mawatha, Colombo 07, Sri Lanka"
+        addrLbl.numberOfLines = 2
+        addrLbl.font = UIFont.systemFont(ofSize: 14)
+        addrLbl.textAlignment = .center
+        addrLbl.textColor = .black
+        
+        tile.addSubview(addrLbl)
+        addrLbl.anchor(top: phoneLbl.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 40, paddingLeft: 50, paddingRight: 50)
+        
+        let aboutTitle = UILabel()
+        aboutTitle.text = "ABOUT US"
+        addrLbl.adjustsFontSizeToFitWidth = true
+        addrLbl.font = UIFont.systemFont(ofSize: 18)
+        addrLbl.textAlignment = .center
+        addrLbl.textColor = .black
+        
+        tile.addSubview(aboutTitle)
+        aboutTitle.anchor(top: addrLbl.bottomAnchor, paddingTop: 50)
+        aboutTitle.centerX(inView: tile)
+        
+        let aboutDes = UILabel()
+        aboutDes.text = "NIBM COVID19 is a location based tracking system which allows students to determine the possible COVID-19 infected patients aroud the 50m radius and also this application send notifications of new updates and news from NIBM."
+        aboutDes.numberOfLines = 10
+        aboutDes.font = UIFont.systemFont(ofSize: 12)
+        aboutDes.textAlignment = .justified
+        aboutDes.textColor = .darkGray
+        
+        let version = UILabel()
+        version.text = "V 1.0"
+        version.font = UIFont.systemFont(ofSize: 14)
+        version.textAlignment = .justified
+        version.textColor = .systemGray
+        
+        tile.addSubview(version)
+        version.anchor(bottom: tile.bottomAnchor, paddingBottom: 30)
+        version.centerX(inView: tile)
+        
+        tile.addSubview(aboutDes)
+        aboutDes.anchor(top: aboutTitle.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 30, paddingLeft: 50, paddingRight: 50)
+        
+        return tile
     }()
 
     override func viewDidLoad() {
@@ -57,8 +122,8 @@ class ContactViewController: UIViewController {
         titleLbl.centerX(inView: view)
         view.addSubview(backButton)
         backButton.anchor(top: safeArea.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16, width: 38, height: 38)
-        view.addSubview(blankView)
-        blankView.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: safeArea.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+        view.addSubview(mainTile)
+        mainTile.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
     }
     
     func configNavBar() {

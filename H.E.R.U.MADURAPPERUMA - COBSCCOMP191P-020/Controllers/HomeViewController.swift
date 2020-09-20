@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import MapKit
 import AVFoundation
+import LocalAuthentication
 
 private let reuseIdentifier = "LocationCell"
 private let annotationIdentifier = "UserAnnotation"
@@ -212,6 +213,54 @@ class HomeViewController: UIViewController {
         return tile
     }()
     
+    
+    //face id
+    func faceID(){
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Confirm Identify!"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [weak self] success, authenticationError in
+                
+                DispatchQueue.main.async {
+                    if success {
+                        let ac = UIAlertController(title: "Success!", message: "You have authenticated sucessfully.", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                        self?.present(ac, animated: true)
+                    } else {
+                        let ac = UIAlertController(title: "Failed!", message: "You could not be verified. Please try again.", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+                        self?.signOut()
+                        //  self?.present(ac, animated: true)
+                        self?.dismiss(animated: true, completion: nil)
+                        
+                    }
+                }
+            }
+        }
+        else {
+            let ac = UIAlertController(title: "Biometry unavailable!", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .default))
+            self.present(ac, animated: true)
+        }
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: AuthViewController())
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
+        } catch {
+            print("DEBUG: sign out error!")
+        }
+    }
+    
     private let mapTile: UIView = {
         let tile = UIView()
         tile.backgroundColor = .backgroundColor
@@ -342,6 +391,7 @@ class HomeViewController: UIViewController {
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
+            faceID()
             configController()
         }
     }
