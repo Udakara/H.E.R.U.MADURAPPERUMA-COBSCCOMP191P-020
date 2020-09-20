@@ -25,7 +25,6 @@ class SafeTipsViewController: UIViewController {
         return label
     }()
     
-    //let scrollView = UIScrollView()
     
     let scrollView: UIScrollView = {
         let sv = UIScrollView()
@@ -39,7 +38,6 @@ class SafeTipsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewUi()
-        // Do any additional setup after loading the view.
     }
     
     private func viewUi() {
@@ -56,7 +54,7 @@ class SafeTipsViewController: UIViewController {
             titleLbl.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20, paddingBottom: 20)
             titleLbl.centerX(inView: view)
             
-            //scrollView.frame = screensize
+        
             view.addSubview(scrollView)
             scrollView.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
             
@@ -67,13 +65,11 @@ class SafeTipsViewController: UIViewController {
                 // title, image, button
                 let label = UILabel(frame: CGRect(x:  10, y: 10, width: pageView.frame.size.width-20, height: 80))
                 let imageView = UIImageView(frame: CGRect(x:  10, y: 10+120+10, width: pageView.frame.size.width-20, height: pageView.frame.size.height-60-130-15))
-    //            let button = UIButton(type: .system)
                 let button = UIButton(frame: CGRect(x:  10, y: pageView.frame.size.height-60, width: pageView.frame.size.width-20, height: 50))
                 
                 label.textAlignment = .center
                 label.font = UIFont(name: "MarkerFelt-Wide", size: 24)
-                //label.font = UIFont(name: "Chalkduster", size: 24)
-                //label.font = UIFont(name: "ChalkboardSE-Bold", size: 24)
+
                 pageView.addSubview(label)
                 label.text = titles[x]
                 
@@ -81,8 +77,7 @@ class SafeTipsViewController: UIViewController {
                 imageView.image = UIImage(named: "welcome_\(x)")
                 pageView.addSubview(imageView)
                 
-    //            let buttonTitle = NSMutableAttributedString(string: "NEXT", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
-    //            button.setAttributedTitle(buttonTitle, for: .normal)
+
                 button.setTitle("NEXT", for: .normal)
                 if(x == 2) {
                    button.setTitle("DONE!", for: .normal)
@@ -91,8 +86,7 @@ class SafeTipsViewController: UIViewController {
                 button.addTarget(self, action: #selector(handleGoNext(_:)), for: .touchUpInside)
                 button.tag = x+1
                 pageView.addSubview(button)
-                //nextButton.anchor(bottom: pageView.bottomAnchor, paddingBottom: 30)
-                //nextButton.centerX(inView: view)
+
             }
             
             scrollView.contentSize = CGSize(width: screensize.width * 3 , height: 0)

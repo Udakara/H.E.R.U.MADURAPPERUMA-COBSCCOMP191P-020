@@ -79,7 +79,7 @@ class FullMapViewController: UIViewController {
                         guard let userAnno = annotation as? UserAnnotation else { return false }
                         
                         if userAnno.uid == user.uid {
-                            if temp >= 38.0 && result >= 3 {
+                            if temp >= 38.0 && result >= 60 {
                                 userAnno.updateAnnotationPosition(withCoordinate: coordinate)
                                 return true
                             }
@@ -91,7 +91,7 @@ class FullMapViewController: UIViewController {
                 
                 if !usersVisible {
                     if user.uid != currentUid {
-                        if temp >= 38.0 && result >= 3 {
+                        if temp >= 38.0 && result >= 60 {
                             self.mapView.addAnnotation(annotation)
                         }
                     }

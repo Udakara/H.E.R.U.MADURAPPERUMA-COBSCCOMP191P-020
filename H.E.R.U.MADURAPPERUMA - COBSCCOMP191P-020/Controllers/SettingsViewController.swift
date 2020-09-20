@@ -192,7 +192,7 @@ class SettingsViewController: UIViewController {
                 self.present(nav, animated: true, completion: nil)
             }
         } catch {
-            print("DEBUG: sign out error!")
+            print("sign out error!")
         }
     }
 

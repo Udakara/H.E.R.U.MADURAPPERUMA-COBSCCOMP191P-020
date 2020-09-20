@@ -227,7 +227,6 @@ class UpdateViewController: UIViewController {
     }
     
     func configNavBar() {
-        //navigationController?.navigationBar.barTintColor = .lightGray
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .default
     }

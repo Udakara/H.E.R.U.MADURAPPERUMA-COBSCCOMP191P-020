@@ -93,7 +93,7 @@ class ThirdSafeActionViewController: UIViewController {
                 configNavBar()
                 view.backgroundColor = .backgroundColor
         
-                //view.backgroundColor = .white
+                
                 view.addSubview(titleLabel)
                 titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
                 titleLabel.centerX(inView: view)
@@ -102,12 +102,12 @@ class ThirdSafeActionViewController: UIViewController {
                 WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 30, width: 300, height: 270)
                 WelcomeImgView.centerX(inView: view)
                 
-               // view.backgroundColor = .white
+               
                 view.addSubview(warningLabel)
                 warningLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 380)
                 warningLabel.centerX(inView: view)
                 
-                //view.backgroundColor = .white
+                
                 view.addSubview(questionOneLabel)
                 questionOneLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 410)
                 questionOneLabel.centerX(inView: view)

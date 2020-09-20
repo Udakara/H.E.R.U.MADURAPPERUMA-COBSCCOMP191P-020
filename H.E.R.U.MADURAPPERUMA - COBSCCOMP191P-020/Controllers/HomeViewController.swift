@@ -334,7 +334,7 @@ class HomeViewController: UIViewController {
             
             if !driverIsVisible {
                 if driver.uid != currentUserId {
-                    if temp >= 38.0 && result >= 3 {
+                    if temp >= 38.0 && result >= 50 {
                         self.mapView.addAnnotation(annotation)
                         self.warnUser()
                     }
